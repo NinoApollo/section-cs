@@ -11,7 +11,7 @@ const AppHeader = () => {
       {isOpen && (
         <div className="fixed inset-0 index-40" onClick={toggleUserMenu} />
       )}
-      <nav className="fixed top-0 z-50 w-full bg-neutral-primary-soft border-b border-default">
+      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
@@ -21,7 +21,7 @@ const AppHeader = () => {
                 aria-controls="top-bar-sidebar"
                 type="button"
                 onClick={toggleSidebar}
-                className="sm:hidden text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm p-2 focus:outline-none"
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Open sidebar</span>
                 <svg
@@ -47,7 +47,7 @@ const AppHeader = () => {
                   className="h-6 me-3"
                   alt="FlowBite Logo"
                 />
-                <span className="self-center text-lg text-heading font-semibold whitespace-nowrap">
+                <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
                   Flowbite
                 </span>
               </a>

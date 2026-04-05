@@ -13,7 +13,7 @@ const LayoutContent = () => {
       <div>
         <AppHeader />
       </div>
-      <div className="p-20 -ml-14 sm:ml-52">
+      <div className="p-20 -mml-14 sm:ml-52">
         <Outlet />
       </div>
     </>
