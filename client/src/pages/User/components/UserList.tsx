@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
 import {
   Table,
   TableBody,
@@ -12,6 +12,10 @@ interface UserListProps {
 }
 
 const UserList: FC<UserListProps> = ({ onAddUser }) => {
+  useEffect(() => {
+    document.title = "User List Page";
+  }, []);
+
   const users = [
     {
       user_id: 1,
