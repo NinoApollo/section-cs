@@ -44,7 +44,7 @@ const DeleteGenderForm = () => {
 
       setLoadingDestroy(true);
 
-      const res = await GenderService.destroyGender(gender!);
+      const res = await GenderService.destroyGender(gender_id!);
 
       if (res.status === 200) {
         navigate("/", { state: { message: res.data.message } });
