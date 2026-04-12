@@ -3,7 +3,7 @@ import AxiosInstance from "./AxiosInstance";
 const UserService = {
   loadUsers: async () => {
     try {
-      const response = await AxiosInstance.get("/users/loadUsers");
+      const response = await AxiosInstance.get("/user/loadUsers");
       return response;
     } catch (error) {
       throw error;
@@ -11,7 +11,7 @@ const UserService = {
   },
   storeUser: async (data: any) => {
     try {
-      const response = await AxiosInstance.post("/users/storeUser", data);
+      const response = await AxiosInstance.post("/user/storeUser", data);
       return response;
     } catch (error) {
       throw error;
@@ -20,9 +20,17 @@ const UserService = {
   updateUser: async (userId: string | number, data: any) => {
     try {
       const response = await AxiosInstance.put(
-        `/users/updateUser/${userId}`,
+        `/user/updateUser/${userId}`,
         data,
       );
+      return response;
+    } catch (error) {
+      throw error;
+    }
+  },
+  destroyUser: async (userId: string | number) => {
+    try {
+      const response = await AxiosInstance.put(`/user/destroyUser/${userId}`);
       return response;
     } catch (error) {
       throw error;
